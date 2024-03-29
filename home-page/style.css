@@ -64,7 +64,13 @@ tbody,tr,td{
     color: #aba8a8;
     text-align: center;
 }
-
+.logo img{
+    width: 30px;
+    height: 30px;
+    text-align: right;
+    padding-right: 0px;
+    vertical-align: middle;
+}
 .green{
     color: #23d287;
 }
