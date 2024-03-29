@@ -4,8 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>My First HTML Page</title>
+    <title>Vender Ações</title>
 </head>
 <body class="body">
-    
+    <header class="cabecalho" id="home">
+        <nav class="menu">
+            <ul>
+              <a href="../home-page/home.html">Home</a>
+              <a href="../compra-acoes-page/compra.html">Comprar</a>
+              <a href="../venda-acoes-page/venda.html">Vender</a>
+              <a href="../historico-page/historico.html">Historico</a>
+            </ul>
+          </nav>
+    </header>
+    <div class="container">
+        <form class="vender-form">
+            <ul>
+                <li>
+                    <label for="cars">Escolha um ativo</label>
+                    <select id="cars" name="cars">
+                        <option value="petr4">PETR4</option>
+                        <option value="vale3">VALE3</option>
+                        <option value="blau3">BLAU3</option>
+                        <option value="nvdc34">NVDC34</option>
+                        <option value="simh3">SIMH3</option>
+                        <option value="bpac11">BPAC11</option>
+                        <option value="brkm5">BRKM5</option>
+                        <option value="brbi11">BRBI11</option>
+                        <option value="cple6">CPLE6</option>
+                        <option value="elet6">ELET6</option>
+                    </select>
+                </li>
+                <li>
+                    <span id="preco">37,52</span>
+                </li>
+            </ul>
+
+
+            <label for="Quantidade">Quantidade</label>
+            <input type="number" id="quantidade" step="100" value="200">
+        </form>
+
+        <section class="tabela-section">
+            <ul>
+                <li>
+                    <span class="tabela-label">Valor total estimado</span>
+                    <span>R$ 7.504,00</span>
+                </li>
+                <li>
+                    <span class="tabela-label">Limite disponível</span>
+                    <span>R$ 551.909,19</span>
+                </li>
+                <li>
+                    <span class="tabela-label">Saldo Projetado</span>
+                    <span>R$ 2.957,41</span>
+                </li>
+            </ul>
+        </section>
+        <button type="button" class="btn-vender">
+            <div class="subitem-container">
+                <span class="btn-label">VENDER</span>
+            </div>
+        </button>
+    </div>
 </body>

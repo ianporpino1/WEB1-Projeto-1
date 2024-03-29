@@ -99,6 +99,7 @@ input:focus {
     border: none;
     padding: 8px;
     width: 400px;
+    height: 40px;
     border-radius: 4px;
     color: #101010;
     background-color: #549CFF;

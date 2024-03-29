@@ -1,0 +1,108 @@
+.body{
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+}
+.cabecalho{
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+.menu a {
+    color: #f2f2f2;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+.container{
+    background-color: #2e3238;
+    width: 100%;
+    color: #FFFFFF;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.vender-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    width: 400px;
+
+    label{
+        text-align: left;
+        font-size: 12px;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        list-style: none;
+        gap: 50px;
+    }
+}
+
+input{
+    background-color: #2e3238;
+    border: none; 
+    border-bottom: 1px solid #ccc;
+   
+    color: whitesmoke;
+
+    width: 100%;
+    line-height: 40px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+input:focus {
+    outline: none;
+}
+
+.tabela-section{
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #101010;
+    padding: 8px;
+    border-radius: 4px;
+    width: 400px;
+    height: 100px;
+}
+.tabela-label{
+    color: #FFFFFF7F;
+}
+
+.tabela-section ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.tabela-section span{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.tabela-section ul{
+    padding: 0;
+    list-style: none;
+}
+
+.btn-vender{
+    border: none;
+    padding: 8px;
+    width: 400px;
+    height: 40px;
+    border-radius: 4px;
+    color: #101010;
+    background-color: #ED515A;
+}
