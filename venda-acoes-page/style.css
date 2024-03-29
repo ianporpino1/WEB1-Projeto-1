@@ -106,3 +106,14 @@ input:focus {
     color: #101010;
     background-color: #ED515A;
 }
+
+select{
+    
+    background-color: #2e3238;
+    border: none;
+    color: whitesmoke;
+    border-bottom: 1px solid #ddd;
+}
+select:focus {
+    outline: none;
+}
