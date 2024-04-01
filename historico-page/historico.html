@@ -19,130 +19,404 @@
     </header>
     
         <div class="main-section">
-            <h1 class="titulo">PORTFOLIO</h1>
-            <h2>PATRIMÔNIO TOTAL <b class="orange">R$ 100.000,00</b></h2>
-            <h2>SALDO EM CONTA R$ 10.000,00</h2>
+            <h1 class="titulo">HISTORICO</h1>
+            <h2>SALDO EM CONTA</h2>
+            <span class="green">R$ 10.000,00</span>
         </div>
-        <div class="container investments">
-            <table class="portfolio-table">
+        <div class="filtro-container">
+            <div class="filtro-title">
+                <img src="icons/config-sliders.svg">
+                <h3 class="filtro-text">FILTROS</h3>
+            </div>
+            <form class="filtro">
+                
+                <label for="periodo">PERÍODO</label>
+                <select>
+                    <option>Hoje</option>
+                    <option>5 dias</option>
+                    <option>15 dias</option>
+                    <option>30 dias</option>
+                </select>
+                
+                <input type="submit" value="FILTRAR">
+                <button>GERAR RELATÓRIO</button>
+            </form>
+        </div>
+        <div class="table-container">
+            <table class="tabela">
                 <thead>
-                    <tr>
-                        <th></th>
-                        <th>NOME</th>
-                        <th>QUANTIDADE</th>
-                        <th>PRECO MÉDIO</th>
-                        <th>PROVENTOS DA POSIÇÃO</th>
-                        <th>PREÇO DE MERCADO</th>
-                        <th>RESULTADO COM PROVENTOS</th>
-                        <th>SALDO BRUTO</th>
-                    </tr>
-                    <tbody>
-                        <tr>
-                            <td class="logo"><img src="./logos/banco-do-brasil--600.png" > </td>
-                            <td>BBAS3</td>
-                            <td>400</td>
-                            <td>R$30,65</td>
-                            <td>R$3.065,86</td>
-                            <td>R$55,48</td>
-                            <td><b class="green">105,93%</b></td>
-                            <td>R$22.192,00</td>
-                        </tr>
-                        <tr>
-                            <td class="logo"><img src="./logos/free-vale.webp" width="24px" height="24px"> </td>
-                            <td>VALE3</td>
-                            <td>300</td>
-                            <td>R$65,80</td>
-                            <td>R$1.870,72</td>
-                            <td>R$60,45</td>
-                            <td><b class="green">1,35%</b></td>
-                            <td>R$18.135,00</td>
-                        </tr>
-                        <tr>
-                            <td class="logo"><img src="./logos/blau-on-nm--600.png" width="24px" height="24px"> </td>
-                            <td>BLAU3</td>
-                            <td>800</td>
-                            <td>R$14,56</td>
-                            <td>R$85,15</td>
-                            <td>R$12,11</td>
-                            <td><b class="red">-16,11%</b></td>
-                            <td>R$9.688,00</td>
-                        </tr>
-                        <tr>
-                            <td class="logo"><img src="./logos/nvidia_logo_icon_169902.png" width="24px" height="24px"> </td>
-                            <td>NVDC34</td>
-                            <td>47</td>
-                            <td>R$14,86</td>
-                            <td>R$1,34</td>
-                            <td>R$93,65</td>
-                            <td><b class="green">530,41%</b></td>
-                            <td>R$4.401,55</td>
-                        </tr>
-                        <tr>
-                            <td class="logo"><img src="./logos/SIMH.png" width="24px" height="24px"> </td>
-                            <td>SIMH3</td>
-                            <td>1.300</td>
-                            <td>R$8,22</td>
-                            <td>R$394,47</td>
-                            <td>R$7,17</td>
-                            <td><b class="red">-9,03%</b></td>
-                            <td>R$9.321,00</td>
-                        </tr>
-
-                        <tr>
-                            <td class="logo"><img src="./logos/btg-logo-azul.webp" width="24px" height="24px"> </td>
-                            <td>BPAC11</td>
-                            <td>200</td>
-                            <td>R$19,80</td>
-                            <td>R$188,53</td>
-                            <td>R$36,52</td>
-                            <td><b class="green">89,24%</b></td>
-                            <td>R$7.304,00</td>
-                        </tr>
-                        <tr>
-                            <td class="logo"><img src="./logos/braskem.png" width="24px" height="24px"> </td>
-                            <td>BRKM5</td>
-                            <td>400</td>
-                            <td>R$43,31</td>
-                            <td>R$637,05</td>
-                            <td>R$26,40</td>
-                            <td><b class="red">-18,42%</b></td>
-                            <td>R$10.560,00</td>
-                        </tr>
-                        <tr>
-                            <td class="logo"><img src="./logos/images.png" width="24px" height="24px"> </td>
-                            <td>BRBI11</td>
-                            <td>1.000</td>
-                            <td>R$15,45</td>
-                            <td>R$2.076,00</td>
-                            <td>R$16,65</td>
-                            <td><b class="red">21,17%</b></td>
-                            <td>R$16.650,00</td>
-                        </tr>
-                        <tr>
-                            <td class="logo"><img src="./logos/copel.jpg" width="24px" height="24px"> </td>
-                            <td>CPLE6</td>
-                            <td>1.000</td>
-                            <td>R$6,54</td>
-                            <td>R$840,27</td>
-                            <td>R$9,62</td>
-                            <td><b class="green">60,06%</b></td>
-                            <td>R$9.620,00</td>
-                        </tr>
-                        <tr>
-                            <td class="logo"><img src="./logos/eletrobras.png" width="24px" height="24px"> </td>
-                            <td>ELET6</td>
-                            <td>200</td>
-                            <td>R$46,32</td>
-                            <td>R$149,36</td>
-                            <td>R$46,63</td>
-                            <td><b class="green">2,27%</b></td>
-                            <td>R$9.326,00</td>
-                        </tr>
-                    </tbody>
+                    <th>DATA</th>
+                    <th>DESCRIÇÃO</th>
+                    <th>OPERAÇÃO</th>
+                    <th>MOVIMENTAÇÃO (R$)</th>
+                    <th>SALDO (R$)</th>
                 </thead>
-
+                <tbody>
+                    <tr class="info">
+                        <td></td>
+                        <td>Saldo Inicial</td>
+                        <td></td>
+                        <td></td>
+                        <td>12.246,82</td>
+                    </tr>
+                    <tr>
+                        <td>05/03/2024</td>
+                        <td>DIVIDENDOS s/ 3TENTOS ON ED NM - TTEN3</td>
+                        <td>Crédito</td>
+                        <td class="green">141,18</td>
+                        <td>12.388,00</td>
+                    </tr>
+                    <tr>
+                        <td>05/03/2024</td>
+                        <td>Contribuição Previdência - Certificado: 176126 - BTG PACTUAL VIDA E PREVIDENCIA SA</td>
+                        <td>Débito</td>
+                        <td class="red">500,00</td>
+                        <td>11.888,00</td>
+                    </tr>
+                    <tr>
+                        <td>07/03/2024</td>
+                        <td>RENDIMENTOS s/ FII VBI PRI CI ER - PVBI11</td>
+                        <td>Crédito</td>
+                        <td class="green">32,50</td>
+                        <td>11.920,50</td>
+                    </tr>
+                    <tr>
+                        <td>07/03/2024</td>
+                        <td>RENDIMENTOS s/ FII VBI LOG CI ERS - LVBI11</td>
+                        <td>Crédito</td>
+                        <td class="green">63,00</td>
+                        <td>11.983,50</td>
+                    </tr>
+                    <tr>
+                        <td>11/03/2024</td>
+                        <td>RECEBIMENTO TRANSFERÊNCIA - Ana Claudia Bulhoes Porpino De Macedo</td>
+                        <td>Crédito</td>
+                        <td class="green">2.430,00</td>
+                        <td>14.413,50</td>
+                    </tr>
+                    <tr>
+                        <td>11/03/2024</td>
+                        <td>EMISSÃO - CDB BANCO BTG PACTUAL S A - Venc: 11/03/2025 XX1002827101</td>
+                        <td>Débito</td>
+                        <td class="red">4.000,00</td>
+                        <td>10.413,50</td>
+                    </tr>
+                    <tr>
+                        <td>11/03/2024</td>
+                        <td>CONTA REMUNERADA - RESGATE REMUNERAÇÃO - BANCO BTG PACTUAL S.A.</td>
+                        <td>Crédito</td>
+                        <td class="green">0,03</td>
+                        <td>10.413,53</td>
+                    </tr>
+                    <tr>
+                        <td>12/03/2024</td>
+                        <td>LIQ BOLSA (Operacoes)- Pregão:11/03/2024</td>
+                        <td>Débito</td>
+                        <td class="red">52,05</td>
+                        <td>10.361,48</td>
+                    </tr>
+                    <tr>
+                        <td>13/03/2024</td>
+                        <td>LIQ BOLSA (Operacoes)- Pregão:11/03/2024</td>
+                        <td>Débito</td>
+                        <td class="red">7.860,35</td>
+                        <td>2.501,13</td>
+                    </tr>
+                    <tr>
+                        <td>13/03/2024</td>
+                        <td>CONTA REMUNERADA - RESGATE REMUNERAÇÃO - BANCO BTG PACTUAL S.A.</td>
+                        <td>Crédito</td>
+                        <td class="green">0,30</td>
+                        <td>2.501,43</td>
+                    </tr>
+                    <tr>
+                        <td>14/03/2024</td>
+                        <td>RENDIMENTOS s/ FII REC RECECI ER - RECR11</td>
+                        <td>Crédito</td>
+                        <td class="green">79,20</td>
+                        <td>2.580,63</td>
+                    </tr>
+                    <tr>
+                        <td>14/03/2024</td>
+                        <td>RENDIMENTOS s/ FII TG ATIVOCI - TGAR11</td>
+                        <td>Crédito</td>
+                        <td class="green">86,45</td>
+                        <td>2.667,08</td>
+                    </tr>
+                    <tr>
+                        <td>14/03/2024</td>
+                        <td>RENDIMENTOS s/ FII MALLS BPCI - MALL11</td>
+                        <td>Crédito</td>
+                        <td class="green">69,00</td>
+                        <td>2.736,08</td>
+                    </tr>
+                    <tr>
+                        <td>14/03/2024</td>
+                        <td>RENDIMENTOS s/ FII TRX REALCI ES - TRXF11</td>
+                        <td>Crédito</td>
+                        <td class="green">97,20</td>
+                        <td>2.833,28</td>
+                    </tr>
+                    <tr>
+                        <td>14/03/2024</td>
+                        <td>RENDIMENTOS s/ FII CSHG URBCI - HGRU11</td>
+                        <td>Crédito</td>
+                        <td class="green">59,50</td>
+                        <td>2.892,78</td>
+                    </tr>
+                    <tr>
+                        <td>15/03/2024</td>
+                        <td>RENDIMENTOS s/ FII FATOR VECI - VRTA11</td>
+                        <td>Crédito</td>
+                        <td class="green">52,70</td>
+                        <td>2.945,48</td>
+                    </tr>
+                    <tr>
+                        <td>19/03/2024</td>
+                        <td>RENDIMENTOS s/ FII MAUA CI ER - MCCI11</td>
+                        <td>Crédito</td>
+                        <td class="green">72,00</td>
+                        <td>3.017,48</td>
+                    </tr>
+                    <tr>
+                        <td>19/03/2024</td>
+                        <td>DIVIDENDOS s/ VALE ON ED NM - VALE3</td>
+                        <td>Crédito</td>
+                        <td class="green">821,56</td>
+                        <td>3.839,04</td>
+                    </tr>
+                    <tr>
+                        <td>19/03/2024</td>
+                        <td>RENDIMENTOS s/ FII VALORAIPCI ER - VGIP11</td>
+                        <td>Crédito</td>
+                        <td class="green">74,70</td>
+                        <td>3.913,74</td>
+                    </tr>
+                    <tr>
+                        <td>19/03/2024</td>
+                        <td>RECEBIMENTO TRANSFERÊNCIA - Ana Claudia Bulhoes Porpino De Macedo</td>
+                        <td>Crédito</td>
+                        <td class="green">40.000,00</td>
+                        <td>43.913,74</td>
+                    </tr>
+                    <tr>
+                        <td>19/03/2024</td>
+                        <td>EMISSÃO - CDB BANCO BTG PACTUAL S A - Venc: 19/03/2025 XX1002851787</td>
+                        <td>Débito</td>
+                        <td class="red">40.000,00</td>
+                        <td>3.913,74</td>
+                    </tr>
+                    <tr>
+                        <td>20/03/2024</td>
+                        <td>LIQ BOLSA - subscricao s/ LVBI11</td>
+                        <td>Débito</td>
+                        <td class="red">1.056,06</td>
+                        <td>2.857,68</td>
+                    </tr>
+                    <tr>
+                        <td>20/03/2024</td>
+                        <td>CONTA REMUNERADA - RESGATE REMUNERAÇÃO - BANCO BTG PACTUAL S.A.</td>
+                        <td>Crédito</td>
+                        <td class="green">0,09</td>
+                        <td>2.857,77</td>
+                    </tr>
+                    <tr>
+                        <td>25/03/2024</td>
+                        <td>RENDIMENTOS s/ FII XP MALLSCI ERS - XPML11</td>
+                        <td>Crédito</td>
+                        <td class="green">81,00</td>
+                        <td>2.938,77</td>
+                    </tr>
+                    <tr>
+                        <td>25/03/2024</td>
+                        <td>RENDIMENTOS s/ FII ALIANZA CI ER - ALZR11</td>
+                        <td>Crédito</td>
+                        <td class="green">32,69</td>
+                        <td>2.971,46</td>
+                    </tr>
+                    <tr>
+                        <td>25/03/2024</td>
+                        <td>RENDIMENTOS s/ FII BTLG CI ER - BTLG11</td>
+                        <td>Crédito</td>
+                        <td class="green">77,52</td>
+                        <td>3.048,98</td>
+                    </tr>
+                    <tr>
+                        <td>25/03/2024</td>
+                        <td>RENDIMENTOS s/ FII BTLG REC - BTLG13</td>
+                        <td>Crédito</td>
+                        <td class="green">8,59</td>
+                        <td>3.057,57</td>
+                    </tr>
+                    <tr>
+                        <td>25/03/2024</td>
+                        <td>CUPOM - LCI BANCO BTG PACTUAL S A - Venc: 25/03/2024 23L02503175</td>
+                        <td>Crédito</td>
+                        <td class="green">1.421,45</td>
+                        <td>4.479,02</td>
+                    </tr>
+                    <tr>
+                        <td>25/03/2024</td>
+                        <td>VENCIMENTO - LCI BANCO BTG PACTUAL S A - Venc: 25/03/2024 23L02503175</td>
+                        <td>Crédito</td>
+                        <td class="green">60.000,00</td>
+                        <td>64.479,02</td>
+                    </tr>
+                    <tr>
+                        <td>25/03/2024</td>
+                        <td>RECEBIMENTO TRANSFERÊNCIA - Ana Claudia Bulhoes Porpino De Macedo</td>
+                        <td>Crédito</td>
+                        <td class="green">25.000,60</td>
+                        <td>89.479,62</td>
+                    </tr>
+                    <tr>
+                        <td>25/03/2024</td>
+                        <td>EMISSÃO - CDB BANCO BTG PACTUAL S A - Venc: 25/03/2025 XX1002865126</td>
+                        <td>Débito</td>
+                        <td class="red">80.000,00</td>
+                        <td>9.479,62</td>
+                    </tr>
+                    <tr>
+                        <td>27/03/2024</td>
+                        <td>AJ NEG DE FUT - PRG 26/03/2024</td>
+                        <td>Débito</td>
+                        <td class="red">7,50</td>
+                        <td>9.472,12</td>
+                    </tr>
+                    <tr>
+                        <td>27/03/2024</td>
+                        <td>JUROS S/ CAPITAL s/ BRASIL ON NM - BBAS3</td>
+                        <td>Crédito</td>
+                        <td class="green">139,41</td>
+                        <td>9.611,53</td>
+                    </tr>
+                    <tr>
+                        <td>27/03/2024</td>
+                        <td>RECEBIMENTO TRANSFERÊNCIA - Ana Claudia Bulhoes Porpino De Macedo</td>
+                        <td>Crédito</td>
+                        <td class="green">47.486,68</td>
+                        <td>57.098,21</td>
+                    </tr>
+                    <tr>
+                        <td>27/03/2024</td>
+                        <td>RECEBIMENTO TRANSFERÊNCIA - Ana Claudia Bulhoes Porpino De Macedo</td>
+                        <td>Crédito</td>
+                        <td class="green">47.000,00</td>
+                        <td>104.098,21</td>
+                    </tr>
+                    <tr>
+                        <td>27/03/2024</td>
+                        <td>EMISSÃO - CDB BANCO BTG PACTUAL S A - Venc: 27/03/2025 XX1002870915</td>
+                        <td>Débito</td>
+                        <td class="red">100.000,00</td>
+                        <td>4.098,21</td>
+                    </tr>
+                    <tr>
+                        <td>27/03/2024</td>
+                        <td>CONTA REMUNERADA - RESGATE REMUNERAÇÃO - BANCO BTG PACTUAL S.A.</td>
+                        <td>Crédito</td>
+                        <td class="green">0,01</td>
+                        <td>4.098,22</td>
+                    </tr>
+                    <tr>
+                        <td>27/03/2024</td>
+                        <td>CONTA REMUNERADA - RESGATE REMUNERAÇÃO - BANCO BTG PACTUAL S.A.</td>
+                        <td>Crédito</td>
+                        <td class="green">0,23</td>
+                        <td>4.098,45</td>
+                    </tr>
+                    <tr>
+                        <td>27/03/2024</td>
+                        <td>CONTA REMUNERADA - RESGATE REMUNERAÇÃO - BANCO BTG PACTUAL S.A.</td>
+                        <td>Crédito</td>
+                        <td class="green">0,01</td>
+                        <td>4.098,46</td>
+                    </tr>
+                    <tr>
+                        <td>28/03/2024</td>
+                        <td>LIQ BOLSA (Operacoes)- Pregão:26/03/2024</td>
+                        <td>Crédito</td>
+                        <td class="green">6.319,87</td>
+                        <td>10.418,33</td>
+                    </tr>
+                    <tr>
+                        <td>28/03/2024</td>
+                        <td>DIVIDENDOS s/ EZTEC ON ED NM - EZTC3</td>
+                        <td>Crédito</td>
+                        <td class="green">45,07</td>
+                        <td>10.463,40</td>
+                    </tr>
+                    <tr>
+                        <td>01/04/2024</td>
+                        <td>PAGAMENTO DE PLATAFORMA: ESTORNO</td>
+                        <td>Crédito</td>
+                        <td class="green">130,00</td>
+                        <td>10.593,40</td>
+                    </tr>
+                    <tr>
+                        <td>01/04/2024</td>
+                        <td>PAGAMENTO DE PLATAFORMA: NELOGICA SISTEMAS DE SOFTWARE LTDA - ProfitChart (Pro)</td>
+                        <td>Débito</td>
+                        <td class="red">130,00</td>
+                        <td>10.463,40</td>
+                    </tr>
+                    <tr>
+                        <td>01/04/2024</td>
+                        <td>LIQ BOLSA - subscricao s/ TRXF11</td>
+                        <td>Débito</td>
+                        <td class="red">1.747,04</td>
+                        <td>8.716,36</td>
+                    </tr>
+                    <tr>
+                        <td>01/04/2024</td>
+                        <td>RECEBIMENTO TRANSFERÊNCIA - Ana Claudia Bulhoes Porpino De Macedo</td>
+                        <td>Crédito</td>
+                        <td class="green">10.968,00</td>
+                        <td>19.684,36</td>
+                    </tr>
+                    <tr>
+                        <td>01/04/2024</td>
+                        <td>ENVIO TRANSFERÊNCIA - Ana Claudia Bulhoes Porpino De Macedo</td>
+                        <td>Débito</td>
+                        <td class="red">2.766,00</td>
+                        <td>16.918,36</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Saldo Final</td>
+                        <td></td>
+                        <td></td>
+                        <td>16.918,36</td>
+                    </tr>
+                </tbody>
             </table>
+
         </div>
+        <footer>
+            <div class="footer-container">
+                <div class="atendimento">
+                    <p>Atendimento</p>
+                    <span>(11) 3383-0526 (São Paulo)</span><br>
+                    <span>(21) 2101-8300 (Rio de Janeiro)</span><br>
+                    <span>Horário de atendimento:<br>
+                        De segunda à sexta-feira (exceto feriados)<br> das 8h às 18h30</span>
+                </div>
+                <div class="atendimento">
+                    <p>SAC</p>
+                    <span>(11) 3383-0526 / (11) 2142-0409 (São Paulo)</span><br>
+                    <span>0800 772 2827 (Demais localidades)</span>
+                    <span>Horário de atendimento:<br>
+                        De segunda à sexta-feira (exceto feriados)<br> das 9h às 18h00</span>
+                </div>
+                <div class="atendimento">
+                    <p>Ouvidoria</p>
+                    <span>0800 776 1443</span><br>
+                    <span>Horário de atendimento:<br>
+                        De segunda à sexta-feira (exceto feriados)<br> das 9h às 18h00</span>
+                </div>
+            </div>
+            
+        </footer>
 
    
     
