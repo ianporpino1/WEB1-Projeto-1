@@ -32,9 +32,8 @@
 .vender-form{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     
-    width: 40%;
+    width: 20%;
 
     label{
         text-align: left;
@@ -71,7 +70,7 @@ input:focus {
     background-color: #101010;
     padding: 8px;
     border-radius: 4px;
-    width: 40%;
+    width: 20%;
     height: min-content;
 }
 .tabela-label{
@@ -92,6 +91,7 @@ input:focus {
 
 .tabela-section ul{
     list-style: none;
+    padding: 0;
 }
 
 .btn-vender{
