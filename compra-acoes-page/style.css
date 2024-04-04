@@ -32,7 +32,7 @@
 .comprar-form{
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 40%;
 
     label{
         text-align: left;
@@ -71,8 +71,8 @@ input:focus {
     background-color: #101010;
     padding: 8px;
     border-radius: 4px;
-    width: 400px;
-    height: 100px;
+    width: 40%;
+    height: min-content;
 }
 .tabela-label{
     color: #FFFFFF7F;
@@ -124,5 +124,20 @@ input:focus {
     span{
         line-height: 2;
         font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        
+        width: 100%;
+    }
+    .tabela-section, .comprar-form{
+        width: 80%;
+    }
+    
+    .btn-comprar {
+        width: 80%;
+        
     }
 }

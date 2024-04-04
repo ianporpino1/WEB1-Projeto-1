@@ -34,7 +34,7 @@
     flex-direction: column;
     justify-content: center;
     
-    width: 400px;
+    width: 40%;
 
     label{
         text-align: left;
@@ -53,9 +53,7 @@ input{
     background-color: #2e3238;
     border: none; 
     border-bottom: 1px solid #ccc;
-   
     color: whitesmoke;
-
     width: 100%;
     line-height: 40px;
     font-size: 16px;
@@ -73,8 +71,8 @@ input:focus {
     background-color: #101010;
     padding: 8px;
     border-radius: 4px;
-    width: 400px;
-    height: 100px;
+    width: 40%;
+    height: min-content;
 }
 .tabela-label{
     color: #FFFFFF7F;
@@ -93,7 +91,6 @@ input:focus {
 }
 
 .tabela-section ul{
-    padding: 0;
     list-style: none;
 }
 
@@ -108,7 +105,7 @@ input:focus {
 }
 
 select{
-    
+    width: 100%;
     background-color: #2e3238;
     border: none;
     color: whitesmoke;
@@ -137,5 +134,20 @@ select:focus {
     span{
         line-height: 2;
         font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        
+        width: 100%;
+    }
+    .tabela-section, .vender-form{
+        width: 80%;
+    }
+    
+    .btn-vender {
+        width: 80%;
+        
     }
 }
