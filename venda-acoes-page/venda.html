@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./venda.js"></script>
     <title>Vender Ações</title>
 </head>
 <body class="body">
@@ -14,6 +15,9 @@
               <a href="../compra-acoes-page/compra.html">Comprar</a>
               <a href="../venda-acoes-page/venda.html">Vender</a>
               <a href="../historico-page/historico.html">Historico</a>
+              <a href="../imposto-page/imposto.html">Imposto</a>
+              <a href="../depositar-page/depositar.html">Depositar</a>
+              <a href="../saque-page/saque.html">Sacar</a>
             </ul>
           </nav>
     </header>
@@ -21,19 +25,11 @@
         <form class="vender-form">
             <ul>
                 <li>
-                    <label for="cars">Escolha um ativo</label>
+                    <label for="ticker">Escolha uma acao</label>
                     <span class="style"></span>
-                    <select id="cars" name="cars">
-                        <option value="petr4">PETR4</option>
-                        <option value="vale3">VALE3</option>
-                        <option value="blau3">BLAU3</option>
-                        <option value="nvdc34">NVDC34</option>
-                        <option value="simh3">SIMH3</option>
-                        <option value="bpac11">BPAC11</option>
-                        <option value="brkm5">BRKM5</option>
-                        <option value="brbi11">BRBI11</option>
-                        <option value="cple6">CPLE6</option>
-                        <option value="elet6">ELET6</option>
+                    <select id="ticker-select" name="ticker">
+                        <option value="">Acao</option>
+                        <!-- Linhas da tabela serão adicionadas dinamicamente via JavaScript -->
                     </select>
                 </li>
                 <li>
@@ -43,24 +39,25 @@
 
 
             <label for="Quantidade">Quantidade</label>
-            <input type="number" id="quantidade" step="100" value="200">
+            <input type="number" id="quantidade" step="1" value="0">
         </form>
 
         <section class="tabela-section">
             <ul>
                 <li>
                     <span class="tabela-label">Valor total estimado</span>
-                    <span>R$ 7.504,00</span>
+                    <span id="valor-total-estimado"></span>
                 </li>
                 <li>
                     <span class="tabela-label">Limite disponível</span>
-                    <span>R$ 551.909,19</span>
+                    <span id="limite-disponivel"></span>
                 </li>
                 <li>
                     <span class="tabela-label">Saldo Projetado</span>
-                    <span>R$ 10.461,41</span>
+                    <span id="saldo-projetado"></span>
                 </li>
             </ul>
+        </section>
         </section>
         <button type="button" class="btn-vender">
             <div class="subitem-container">

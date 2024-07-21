@@ -65,6 +65,7 @@
 }
 
 .filtro{
+    display: flex;
     label{
         display: block;
         color: #999;
@@ -89,6 +90,10 @@
     }
 }
 
+.filtro-item{
+    margin-left: 10px;
+}
+
 select{
     border: none;
     border-bottom: 1px solid #ddd;
@@ -106,7 +111,7 @@ select:focus {
     margin-left: 150px;
     margin-right: 150px;
 }
-.tabela{
+.transactions-table{
     margin: 20px 0;
     width: 100%;
     font-size: 16px;

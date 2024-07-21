@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <script type="module" src="./login.js"></script>
-    <title>My First HTML Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7-beta.19/jquery.inputmask.min.js"></script>
+    <script type="module" src="./cadastro.js"></script>
+    <title>Cadastro Usuario</title>
 </head>
 <body class="body">
     <header class="cabecalho">
         <h1>Corretora de Valores</h1>
     </header>
-    <div class="login-container">
-        <form class="login-form" id="login-form">
+    <div class="cadastro-container">
+        <form class="cadastro-form" id="cadastro-form">
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
+
+            <label for="cpf">CPF</label>
+            <input type="text" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" id="cpf" name="cpf" required>
             
             <label for="senha">Senha</label>
             <input type="password" id="password" name="password" required>
@@ -23,7 +28,10 @@
                 <input class="btn-limpar" value="LIMPAR">
                 <input class="btn-enviar" type="submit" value="ENVIAR">
             </div>
+            <a href="../login-page/login.html" class="redirect-link">Ja cadastrado?</a>
         </form>
+        <div id="message"></div>
+        
     </div>
     <footer>
         <div class="footer-container">
