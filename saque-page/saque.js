@@ -11,12 +11,11 @@ saqueForm.addEventListener('submit', function(){
     event.preventDefault()
     amountInput.value = amountInput.value.replace(/[^\d,]/g, '');
     const valor = -(parseFloat(amountInput.value))
-    console.log(valor)
 
     const transaction = buildTransacao(null, valor, TipoTransacao.SAQUE)
     
     try{
-        validateSaque(valor)
+        validateSaque(-valor)
 
         saveTransacao(transaction)
         .then(() => saveSaldo(valor))
@@ -28,7 +27,7 @@ saqueForm.addEventListener('submit', function(){
         });
 
     }catch(error){
-        console.log(error.message)
+        console.error(error.message)
     }
 })
 
@@ -55,6 +54,9 @@ function saveSaldo(valor){
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    const spanSaque = document.getElementById('saldo-disponivel')
+    spanSaque.textContent = formatter.format(user.saldo)
+
     amountInput.addEventListener('input', function(event) {
         let value = event.target.value;
         
@@ -69,7 +71,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 function validateSaque(value){
-    if(value > 0 || value > user.saldo){
+    console.log(value)
+    if(value < 0){
+        throw Error('valor invalido')
+    }
+
+    if(value > user.saldo){
         throw Error('valor invalido')
     }
 }

@@ -32,9 +32,12 @@
                         Realizar Saque
                     </div>
                     <div class="card-body">
+                        <div class="mt-3">
+                            <p style="color: black;">Saldo disponível para saque: <span id="saldo-disponivel"></span></p>
+                        </div>
                         <form id="saque-form">
                             <div class="form-group">
-                                <label for="amount">Valor do Saque</label>
+                                <label style="color: black;" for="amount">Valor do Saque</label>
                                 <input type="text" class="form-control" id="amount" placeholder="Digite o valor" required>
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">Sacar</button>
