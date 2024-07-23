@@ -235,7 +235,7 @@ function updateUserInfo(transaction, resultadoFinanceiro = 0){
     user.totalInvestido += transaction.totalTransacao + resultadoFinanceiro
     const data = 
     {
-        saldo: user.saldo,
+        saldo: Math.round(user.saldo * 100) / 100,
         totalInvestido: user.totalInvestido
     }
     return fetch(`https://web-1-un2-2e85b-default-rtdb.firebaseio.com/users/${user.id}.json`, {

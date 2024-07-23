@@ -99,6 +99,16 @@ function renderPositions(positions, user) {
     saldoContaH2.textContent = `SALDO EM CONTA ${formatter.format(user.saldo)}`;
     mainSection.appendChild(saldoContaH2);
 
+    if (positions.length !== 0) {
+        const resultsListHead = document.querySelector('#portfolio-table thead');
+        resultsListHead.innerHTML = `<tr>
+                        <th>NOME</th>
+                        <th>QUANTIDADE</th>
+                        <th>PREÇO MÉDIO</th>
+                        <th>VALOR TOTAL</th>
+                    </tr>`
+    }
+
     const tableBody = document.querySelector('#portfolio-table tbody');
     tableBody.innerHTML = '';
     positions.forEach(position => {

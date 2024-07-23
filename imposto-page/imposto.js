@@ -5,6 +5,19 @@ let user = JSON.parse(localStorage.getItem('user'));
 
 const impostoForm = document.getElementById('imposto-form')
 const anoSelect = document.getElementById('ano')
+const resultadoMesSpan = document.getElementById('resultado-mes-data')
+const baseImpostoSpan = document.getElementById('base-imposto-data')
+const impostoDevidoSpan = document.getElementById('imposto-pagar-data')
+const volumeTotalSpan = document.getElementById('total-vendas-data')
+const limiteIsencaoSpan = document.getElementById('limite-isencao-data')
+const ganhoIsentoSpan = document.getElementById('ganho-isento-data')
+
+let totalResult = 0
+let totalImposto = 0
+let totalVolume = 0
+const LIMITE_ISENCAO = 35000
+let ganhoIsento = 0
+let baseImposto = 0
 
 document.addEventListener("DOMContentLoaded", function() {
     const currentYear = new Date().getFullYear();
@@ -16,6 +29,12 @@ document.addEventListener("DOMContentLoaded", function() {
         option.textContent = year;
         anoSelect.appendChild(option)
     }
+    resultadoMesSpan.textContent = formatter.format(totalResult)
+    baseImpostoSpan.textContent = formatter.format(baseImposto)
+    impostoDevidoSpan.innerHTML = formatter.format(totalImposto)
+    volumeTotalSpan.innerHTML = formatter.format(totalVolume)
+    limiteIsencaoSpan.innerHTML = formatter.format(LIMITE_ISENCAO)
+    ganhoIsentoSpan.innerHTML = formatter.format(ganhoIsento)
 })
 
 
@@ -78,13 +97,6 @@ function renderResults(results) {
 
     const resultsListBody = document.querySelector('#results-list tbody');
 
-    let totalResult = 0
-    let totalImposto = 0
-    let totalVolume = 0
-    const LIMITE_ISENCAO = 35000
-    let ganhoIsento = 0
-    let baseImposto = 0
-
     results.forEach(result => {
         totalResult += result.resultado
         totalVolume += result.volume
@@ -100,24 +112,16 @@ function renderResults(results) {
         }
     }
 
-
-
-    const resultadoMesSpan = document.getElementById('resultado-mes-data')
     resultadoMesSpan.textContent = formatter.format(totalResult)
 
-    const baseImpostoSpan = document.getElementById('base-imposto-data')
     baseImpostoSpan.textContent = formatter.format(baseImposto)
     
-    const impostoDevidoSpan = document.getElementById('imposto-pagar-data')
     impostoDevidoSpan.innerHTML = formatter.format(totalImposto)
 
-    const volumeTotalSpan = document.getElementById('total-vendas-data')
     volumeTotalSpan.innerHTML = formatter.format(totalVolume)
 
-    const limiteIsencaoSpan = document.getElementById('limite-isencao-data')
     limiteIsencaoSpan.innerHTML = formatter.format(LIMITE_ISENCAO)
 
-    const ganhoIsentoSpan = document.getElementById('ganho-isento-data')
     ganhoIsentoSpan.innerHTML = formatter.format(ganhoIsento)
 
 }
